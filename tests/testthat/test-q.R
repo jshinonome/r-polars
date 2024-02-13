@@ -1,23 +1,23 @@
 test_that("q serialization", {
-  q = Q("localhost", 1800)
+  q <- Q$new("localhost", 1800)
   # RPolarsSeries
   expect_true(
     q$sync("{x ~ 5.0 * 1+til 5}", pl$Series((1:5) * 5, "my_series"))
   )
   # RPolarsDataFrame
-  df = pl$DataFrame(
+  df <- pl$DataFrame(
     sym = c("", "a", "apple"),
     qty = 1:3
   )
   expect_true(
     q$sync('{x ~ ([]sym:("";enlist "a";"apple");qty:1 2 3i)}', df)
   )
-  t = as.POSIXlt("2024-02-13 07:33:32.929106")
+  t <- as.POSIXlt("2024-02-13 07:33:32.929106")
   # POSIXlt
   expect_true(
     q$sync("{x ~ 2024.02.13D07:33:32.929106}", t)
   )
-  t = as.POSIXct("2024-02-13 07:33:32.929106")
+  t <- as.POSIXct("2024-02-13 07:33:32.929106")
   # POSIXct
   expect_true(
     q$sync("{x ~ 2024.02.13D07:33:32.929106}", t)
@@ -68,13 +68,13 @@ test_that("q serialization", {
 })
 
 test_that("q deserialization", {
-  q = Q("localhost", 1800)
+  q <- Q$new("localhost", 1800)
   # RPolarsSeries
   expect_identical(
     q$sync("5.0 * 1+til 5")$to_r(), pl$Series((1:5) * 5, "float")$to_r()
   )
   # RPolarsDataFrame
-  df = pl$DataFrame(
+  df <- pl$DataFrame(
     sym = c("", "a", "apple"),
     qty = 1:3
   )
@@ -82,12 +82,12 @@ test_that("q deserialization", {
     as.data.frame(q$sync('([]sym:("";enlist "a";"apple");qty:1 2 3i)')), as.data.frame(df)
   )
   # POSIXlt
-  t = as.POSIXlt("2024-02-13 07:33:32.929106")
+  t <- as.POSIXlt("2024-02-13 07:33:32.929106")
   expect_identical(
-    q$sync("2024.02.13D07:33:32.929106"), t
+    as.POSIXct(q$sync("2024.02.13D07:33:32.929106"), tz = "UTC"), as.POSIXct(t, tz = "UTC")
   )
   # POSIXct
-  t = as.POSIXct("2024-02-13 07:33:32.929106")
+  t <- as.POSIXct("2024-02-13 07:33:32.929106")
   expect_identical(
     q$sync("2024.02.13D07:33:32.929106"), t
   )

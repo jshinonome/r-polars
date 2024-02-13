@@ -50,7 +50,7 @@ impl Q {
             K::DateTime(k) => {
                 let ms = k.timestamp_micros();
                 let secs = ms as f64 / 1000000.0;
-                R!("as.character(as.POSIXct({{secs}}))").unwrap()
+                R!("as.POSIXct({{secs}})").unwrap()
             }
             K::Date(k) => {
                 let mut days = k.num_days_from_ce() as i64 - 719163;

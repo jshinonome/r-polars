@@ -205,11 +205,7 @@ RPolarsDataFrame$write_json <- function(file, pretty, row_oriented) .Call(wrap__
 RPolarsDataFrame$write_ndjson <- function(file) .Call(wrap__RPolarsDataFrame__write_ndjson, self, file)
 
 #' @export
-`$.RPolarsDataFrame` <- function(self, name) {
-  func <- RPolarsDataFrame[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsDataFrame` <- function (self, name) { func <- RPolarsDataFrame[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsDataFrame` <- `$.RPolarsDataFrame`
@@ -223,11 +219,7 @@ RPolarsVecDataFrame$push <- function(df) invisible(.Call(wrap__RPolarsVecDataFra
 RPolarsVecDataFrame$print <- function() invisible(.Call(wrap__RPolarsVecDataFrame__print, self))
 
 #' @export
-`$.RPolarsVecDataFrame` <- function(self, name) {
-  func <- RPolarsVecDataFrame[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsVecDataFrame` <- function (self, name) { func <- RPolarsVecDataFrame[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsVecDataFrame` <- `$.RPolarsVecDataFrame`
@@ -241,11 +233,7 @@ RPolarsRNullValues$new_columns <- function(x) .Call(wrap__RPolarsRNullValues__ne
 RPolarsRNullValues$new_named <- function(robj) .Call(wrap__RPolarsRNullValues__new_named, robj)
 
 #' @export
-`$.RPolarsRNullValues` <- function(self, name) {
-  func <- RPolarsRNullValues[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsRNullValues` <- function (self, name) { func <- RPolarsRNullValues[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsRNullValues` <- `$.RPolarsRNullValues`
@@ -281,11 +269,7 @@ RPolarsDataType$get_insides <- function() .Call(wrap__RPolarsDataType__get_insid
 RPolarsDataType$is_temporal <- function() .Call(wrap__RPolarsDataType__is_temporal, self)
 
 #' @export
-`$.RPolarsDataType` <- function(self, name) {
-  func <- RPolarsDataType[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsDataType` <- function (self, name) { func <- RPolarsDataType[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsDataType` <- `$.RPolarsDataType`
@@ -301,11 +285,7 @@ RPolarsDataTypeVector$print <- function() invisible(.Call(wrap__RPolarsDataTypeV
 RPolarsDataTypeVector$from_rlist <- function(list) .Call(wrap__RPolarsDataTypeVector__from_rlist, list)
 
 #' @export
-`$.RPolarsDataTypeVector` <- function(self, name) {
-  func <- RPolarsDataTypeVector[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsDataTypeVector` <- function (self, name) { func <- RPolarsDataTypeVector[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsDataTypeVector` <- `$.RPolarsDataTypeVector`
@@ -327,11 +307,7 @@ RPolarsRField$set_name_mut <- function(name) invisible(.Call(wrap__RPolarsRField
 RPolarsRField$set_datatype_mut <- function(datatype) invisible(.Call(wrap__RPolarsRField__set_datatype_mut, self, datatype))
 
 #' @export
-`$.RPolarsRField` <- function(self, name) {
-  func <- RPolarsRField[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsRField` <- function (self, name) { func <- RPolarsRField[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsRField` <- `$.RPolarsRField`
@@ -373,11 +349,7 @@ RPolarsErr$get_rinfo <- function() .Call(wrap__RPolarsErr__get_rinfo, self)
 RPolarsErr$when <- function(s) .Call(wrap__RPolarsErr__when, self, s)
 
 #' @export
-`$.RPolarsErr` <- function(self, name) {
-  func <- RPolarsErr[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsErr` <- function (self, name) { func <- RPolarsErr[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsErr` <- `$.RPolarsErr`
@@ -391,11 +363,7 @@ RPolarsRThreadHandle$is_finished <- function() .Call(wrap__RPolarsRThreadHandle_
 RPolarsRThreadHandle$thread_description <- function() .Call(wrap__RPolarsRThreadHandle__thread_description, self)
 
 #' @export
-`$.RPolarsRThreadHandle` <- function(self, name) {
-  func <- RPolarsRThreadHandle[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsRThreadHandle` <- function (self, name) { func <- RPolarsRThreadHandle[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsRThreadHandle` <- `$.RPolarsRThreadHandle`
@@ -407,11 +375,7 @@ RPolarsWhen$new <- function(condition) .Call(wrap__RPolarsWhen__new, condition)
 RPolarsWhen$then <- function(statement) .Call(wrap__RPolarsWhen__then, self, statement)
 
 #' @export
-`$.RPolarsWhen` <- function(self, name) {
-  func <- RPolarsWhen[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsWhen` <- function (self, name) { func <- RPolarsWhen[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsWhen` <- `$.RPolarsWhen`
@@ -423,11 +387,7 @@ RPolarsThen$when <- function(condition) .Call(wrap__RPolarsThen__when, self, con
 RPolarsThen$otherwise <- function(statement) .Call(wrap__RPolarsThen__otherwise, self, statement)
 
 #' @export
-`$.RPolarsThen` <- function(self, name) {
-  func <- RPolarsThen[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsThen` <- function (self, name) { func <- RPolarsThen[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsThen` <- `$.RPolarsThen`
@@ -437,11 +397,7 @@ RPolarsChainedWhen <- new.env(parent = emptyenv())
 RPolarsChainedWhen$then <- function(statement) .Call(wrap__RPolarsChainedWhen__then, self, statement)
 
 #' @export
-`$.RPolarsChainedWhen` <- function(self, name) {
-  func <- RPolarsChainedWhen[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsChainedWhen` <- function (self, name) { func <- RPolarsChainedWhen[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsChainedWhen` <- `$.RPolarsChainedWhen`
@@ -453,11 +409,7 @@ RPolarsChainedThen$when <- function(condition) .Call(wrap__RPolarsChainedThen__w
 RPolarsChainedThen$otherwise <- function(statement) .Call(wrap__RPolarsChainedThen__otherwise, self, statement)
 
 #' @export
-`$.RPolarsChainedThen` <- function(self, name) {
-  func <- RPolarsChainedThen[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsChainedThen` <- function (self, name) { func <- RPolarsChainedThen[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsChainedThen` <- `$.RPolarsChainedThen`
@@ -1081,11 +1033,7 @@ RPolarsExpr$rolling_corr <- function(a, b, window_size, min_periods, ddof) .Call
 RPolarsExpr$rolling <- function(index_column, period, offset, closed, check_sorted) .Call(wrap__RPolarsExpr__rolling, self, index_column, period, offset, closed, check_sorted)
 
 #' @export
-`$.RPolarsExpr` <- function(self, name) {
-  func <- RPolarsExpr[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsExpr` <- function (self, name) { func <- RPolarsExpr[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsExpr` <- `$.RPolarsExpr`
@@ -1101,11 +1049,7 @@ RPolarsProtoExprArray$push_back_rexpr <- function(r) invisible(.Call(wrap__RPola
 RPolarsProtoExprArray$print <- function() invisible(.Call(wrap__RPolarsProtoExprArray__print, self))
 
 #' @export
-`$.RPolarsProtoExprArray` <- function(self, name) {
-  func <- RPolarsProtoExprArray[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsProtoExprArray` <- function (self, name) { func <- RPolarsProtoExprArray[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsProtoExprArray` <- `$.RPolarsProtoExprArray`
@@ -1219,11 +1163,7 @@ RPolarsLazyFrame$rolling <- function(index_column, period, offset, closed, by, c
 RPolarsLazyFrame$group_by_dynamic <- function(index_column, every, period, offset, label, include_boundaries, closed, by, start_by, check_sorted) .Call(wrap__RPolarsLazyFrame__group_by_dynamic, self, index_column, every, period, offset, label, include_boundaries, closed, by, start_by, check_sorted)
 
 #' @export
-`$.RPolarsLazyFrame` <- function(self, name) {
-  func <- RPolarsLazyFrame[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsLazyFrame` <- function (self, name) { func <- RPolarsLazyFrame[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsLazyFrame` <- `$.RPolarsLazyFrame`
@@ -1243,11 +1183,7 @@ RPolarsLazyGroupBy$head <- function(n) .Call(wrap__RPolarsLazyGroupBy__head, sel
 RPolarsLazyGroupBy$tail <- function(n) .Call(wrap__RPolarsLazyGroupBy__tail, self, n)
 
 #' @export
-`$.RPolarsLazyGroupBy` <- function(self, name) {
-  func <- RPolarsLazyGroupBy[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsLazyGroupBy` <- function (self, name) { func <- RPolarsLazyGroupBy[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsLazyGroupBy` <- `$.RPolarsLazyGroupBy`
@@ -1355,11 +1291,7 @@ RPolarsSeries$from_arrow_array_stream_str <- function(name, robj_str) .Call(wrap
 RPolarsSeries$from_arrow_array_robj <- function(name, array) .Call(wrap__RPolarsSeries__from_arrow_array_robj, name, array)
 
 #' @export
-`$.RPolarsSeries` <- function(self, name) {
-  func <- RPolarsSeries[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsSeries` <- function (self, name) { func <- RPolarsSeries[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsSeries` <- `$.RPolarsSeries`
@@ -1377,11 +1309,7 @@ RPolarsSQLContext$register <- function(name, lf) .Call(wrap__RPolarsSQLContext__
 RPolarsSQLContext$unregister <- function(name) .Call(wrap__RPolarsSQLContext__unregister, self, name)
 
 #' @export
-`$.RPolarsSQLContext` <- function(self, name) {
-  func <- RPolarsSQLContext[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsSQLContext` <- function (self, name) { func <- RPolarsSQLContext[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsSQLContext` <- `$.RPolarsSQLContext`
@@ -1393,11 +1321,7 @@ RPolarsStringCacheHolder$hold <- function() .Call(wrap__RPolarsStringCacheHolder
 RPolarsStringCacheHolder$release <- function() invisible(.Call(wrap__RPolarsStringCacheHolder__release, self))
 
 #' @export
-`$.RPolarsStringCacheHolder` <- function(self, name) {
-  func <- RPolarsStringCacheHolder[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.RPolarsStringCacheHolder` <- function (self, name) { func <- RPolarsStringCacheHolder[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.RPolarsStringCacheHolder` <- `$.RPolarsStringCacheHolder`
@@ -1426,11 +1350,7 @@ Q$connect <- function() .Call(wrap__Q__connect, self)
 Q$shutdown <- function() .Call(wrap__Q__shutdown, self)
 
 #' @export
-`$.Q` <- function(self, name) {
-  func <- Q[[name]]
-  environment(func) <- environment()
-  func
-}
+`$.Q` <- function (self, name) { func <- Q[[name]]; environment(func) <- environment(); func }
 
 #' @export
 `[[.Q` <- `$.Q`
