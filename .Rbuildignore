@@ -32,3 +32,5 @@
 ^\.editorconfig$
 ^rustfmt\.toml$
 ^\.lintr\.R$
+^.task$
+^tests$

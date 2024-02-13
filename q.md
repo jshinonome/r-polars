@@ -176,3 +176,9 @@ devtools::install(quick = TRUE)
 devtools::test(stop_on_failure = TRUE)
 devtools::build(binary = TRUE, args = c('--preclean'), path="/workspaces/r-polars")
 ```
+
+#### Install Binary
+
+```r
+install.packages("polars_0.14.1_R_x86_64-pc-linux-gnu.tar.gz", repos = NULL, type="source", dependencies = TRUE)
+```
