@@ -4,7 +4,7 @@
 \name{polars-package}
 \alias{polars}
 \alias{polars-package}
-\title{polars: Lightning-Fast 'DataFrame' Library}
+\title{polars: Lightning-Fast 'DataFrame' Library with Interface to Q}
 \description{
 Lightning-fast 'DataFrame' library written in 'Rust'. Convert R data to 'Polars' data and vice versa. Perform fast, lazy, larger-than-memory and optimized data queries. 'Polars' is interoperable with the package 'arrow', as both are based on the 'Apache Arrow' Columnar Format.
 }
@@ -25,6 +25,7 @@ Authors:
   \item Ritchie Vink \email{ritchie46@gmail.com}
   \item Tatsuya Shima \email{ts1s1andn@gmail.com}
   \item Etienne Bacher \email{etienne.bacher@protonmail.com}
+  \item Jo Shinonome \email{jo.shinonome@gmail.com}
 }
 
 }

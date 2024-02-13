@@ -25,6 +25,16 @@
 			"source": "devcontainer-cargo-cache-${devcontainerId}",
 			"target": "/usr/local/cargo",
 			"type": "volume"
+		},
+		{
+			"source": "/home/jshinonome/Workspace/kola",
+			"target": "/workspaces/kola",
+			"type": "bind"
+		},
+		{
+			"source": "/home/jshinonome/.local/share/q401",
+			"target": "/workspaces/q",
+			"type": "bind"
 		}
 	],
 	"updateContentCommand": {

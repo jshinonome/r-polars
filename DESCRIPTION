@@ -1,13 +1,14 @@
 Package: polars
-Title: Lightning-Fast 'DataFrame' Library
-Version: 0.14.0.9000
+Title: Lightning-Fast 'DataFrame' Library with Interface to Q
+Version: 0.14.1
 Depends: R (>= 4.2)
 Imports: utils, codetools
 Authors@R:
   c(person("Ritchie", "Vink", , "ritchie46@gmail.com", role = c("aut")),
     person("Soren", "Welling", , "sorhawell@gmail.com", role = c("aut", "cre")),
     person("Tatsuya", "Shima", , "ts1s1andn@gmail.com", role = c("aut")),
-    person("Etienne", "Bacher", , "etienne.bacher@protonmail.com", role = c("aut")))
+    person("Etienne", "Bacher", , "etienne.bacher@protonmail.com", role = c("aut")),
+    person("Jo", "Shinonome", , "jo.shinonome@gmail.com", role = c("aut")))
 Description: Lightning-fast 'DataFrame' library written in 'Rust'. Convert R data
   to 'Polars' data and vice versa. Perform fast, lazy, larger-than-memory and
   optimized data queries. 'Polars' is interoperable with the package 'arrow',
@@ -108,6 +109,7 @@ Collate:
     'polars_envvars.R'
     'polars_info.R'
     'polars_options.R'
+    'q.R'
     'rbackground.R'
     'rlang.R'
     'rust_result.R'
@@ -116,7 +118,7 @@ Collate:
     'sql.R'
     'vctrs.R'
     'zzz.R'
-Config/rextendr/version: 0.3.1
+Config/rextendr/version: 0.3.1.9000
 VignetteBuilder: knitr
 Config/polars/LibVersion: 0.37.0
 Config/polars/RustToolchainVersion: nightly-2024-02-03
