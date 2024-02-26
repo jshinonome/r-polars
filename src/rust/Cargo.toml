@@ -56,6 +56,7 @@ polars-core = { git = "https://github.com/pola-rs/polars.git", rev = "f3c4cc5ba7
 polars-lazy = { git = "https://github.com/pola-rs/polars.git", rev = "f3c4cc5ba746cb858cda9a9071865fd24b656a17", default-features = false }
 either = "1"
 #features copied from node-polars
+kola = { path = "/workspaces/kola/crates/kola" }
 
 [dependencies.polars]
 features = [

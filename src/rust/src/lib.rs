@@ -18,6 +18,7 @@ pub mod conversion;
 pub mod conversion_r_to_s;
 pub mod conversion_s_to_r;
 pub mod info;
+pub mod q;
 pub mod rbackground;
 pub mod rdataframe;
 pub mod rdatatype;
@@ -53,6 +54,7 @@ extendr_module! {
     use series;
     use info;
     use rstringcache;
+    use q;
 }
 
 #[cfg(feature = "sql")]
@@ -68,4 +70,5 @@ extendr_module! {
     use sql;
     use info;
     use rstringcache;
+    use q;
 }

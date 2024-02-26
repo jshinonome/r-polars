@@ -1,13 +1,6 @@
 {
-	"image": "ghcr.io/rocker-org/devcontainer/r-ver:4",
-	"features": {
-		"ghcr.io/devcontainers/features/rust:1": {},
-		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "cmake,python3-venv"
-		},
-		"ghcr.io/eitsupi/devcontainer-features/go-task:1": {},
-		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
-	},
+	"image": "almalinux:9.2",
+	"features": {},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -25,6 +18,16 @@
 			"source": "devcontainer-cargo-cache-${devcontainerId}",
 			"target": "/usr/local/cargo",
 			"type": "volume"
+		},
+		{
+			"source": "/home/jshinonome/Workspace/kola",
+			"target": "/workspaces/kola",
+			"type": "bind"
+		},
+		{
+			"source": "/home/jshinonome/.local/share/q401",
+			"target": "/workspaces/q",
+			"type": "bind"
 		}
 	],
 	"updateContentCommand": {

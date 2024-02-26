@@ -1318,5 +1318,34 @@ RPolarsStringCacheHolder$release <- function() invisible(.Call(wrap__RPolarsStri
 #' @export
 `[[.RPolarsStringCacheHolder` <- `$.RPolarsStringCacheHolder`
 
+Q <- new.env(parent = emptyenv())
+
+Q$new <- function(
+    host,
+    port,
+    user = "",
+    password = "",
+    enable_tls = FALSE) {
+  .Call(wrap__Q__new, host, port, user, password, enable_tls)
+}
+
+Q$sync <- function(expr, ...) .Call(wrap__Q__execute, self, expr, list(...))
+
+Q$async <- function(expr, ...) .Call(wrap__Q__execute_async, self, expr, list(...))
+
+Q$execute <- function(expr, args) .Call(wrap__Q__execute, self, expr, args)
+
+Q$execute_async <- function(expr, args) .Call(wrap__Q__execute_async, self, expr, args)
+
+Q$connect <- function() .Call(wrap__Q__connect, self)
+
+Q$shutdown <- function() .Call(wrap__Q__shutdown, self)
+
+#' @export
+`$.Q` <- function (self, name) { func <- Q[[name]]; environment(func) <- environment(); func }
+
+#' @export
+`[[.Q` <- `$.Q`
+
 
 # nolint end
